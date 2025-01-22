@@ -35,3 +35,19 @@ Este proyecto requiere Python 3.10.16 para su correcta ejecución.
 10. Para ejecutar en el escritorio ejecuta el archivo **UsarEsteModelo** 
 
 11. Para ejecutar en la web ejecuta el archivo **app.py** y abre el index en cualquier navegador
+
+**Descripción de la red neuronal**
+
+**Arquitectura de la red neuronal:**
+**Capa de entrada:** La primera capa es una capa densa (Dense) con 128 neuronas y una función de activación ReLU (Rectified Linear Unit). Esta capa toma las características de entrada (X) y las procesa.
+**Capa oculta: La segunda capa también es densa con 64 neuronas y una activación ReLU. Esta capa realiza el procesamiento intermedio entre la entrada y la salida.
+**Capa de salida:** La última capa es una capa densa con el número de neuronas igual al número de clases en la variable de salida (y). La función de activación utilizada aquí es softmax, que es adecuada para tareas de clasificación múltiple porque transforma las salidas en probabilidades, donde la clase con la mayor probabilidad es la predicción final.
+
+**Función de pérdida:**
+El modelo utiliza la función de pérdida **categorical_crossentropy**, que es adecuada para problemas de clasificación múltiple con codificación one-hot (como es el caso en este código).
+
+**Optimización:**
+El optimizador utilizado es **Adam**, que es un optimizador popular y eficiente para problemas de aprendizaje profundo.
+
+**Tipo de red neuronal:**
+**Red Neuronal Multicapa (MLP):** Esta red es una red neuronal totalmente conectada **(feedforward)**, en la que cada neurona de una capa está conectada a todas las neuronas de la siguiente capa. Es un tipo básico de red neuronal utilizada en tareas de clasificación
